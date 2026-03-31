@@ -4,9 +4,9 @@ compatibility_date = "2025-04-01"
 compatibility_flags = [ "nodejs_compat" ]
 keep_vars = true
 # if you want use custom_domain, you need to add routes
-# routes = [
-# 	{ pattern = "temp-email-api.xxxxx.xyz", custom_domain = true },
-# ]
+routes = [
+	{ pattern = "inbox.rstech.cfd", custom_domain = true },
+]
 
 # if you want deploy worker with frontend assets, you need to add assets
 # [assets]
@@ -16,14 +16,14 @@ keep_vars = true
 
 # enable cron if you want set auto clean up
 # [triggers]
-# crons = [ "0 0 * * *" ]
+crons = [ "0 0 * * *" ]
 
-# send_email = [
-#    { name = "SEND_MAIL" },
-# ]
+send_email = [
+   { name = "SEND_MAIL" },
+]
 
 [vars]
-# DEFAULT_LANG = "zh"
+DEFAULT_LANG = "en"
 # TITLE = "Custom Title" # custom title
 # ANNOUNCEMENT = "Custom Announcement"
 # always show ANNOUNCEMENT even no changes
@@ -48,8 +48,8 @@ PREFIX = "tmp"
 # ADMIN_CONTACT = "xx@xx.xxx"
 # Create new address with default domain first, if set true, will use first domain from DEFAULT_DOMAINS when no domain specified
 # CREATE_ADDRESS_DEFAULT_DOMAIN_FIRST = false
-DEFAULT_DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # domain name for no role users
-DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # all domain names
+DEFAULT_DOMAINS = ["rstech.cfd" , "srlabs.cfd"] # domain name for no role users
+DOMAINS = ["rstech.cfd" , "srlabs.cfd"] # all domain names
 # For chinese domain name, you can use DOMAIN_LABELS to show chinese domain name
 # DOMAIN_LABELS = ["中文.xxx", "xxx.xxx2"]
 # USER_DEFAULT_ROLE = "vip" # default role for new users(only when enable mail verification)
